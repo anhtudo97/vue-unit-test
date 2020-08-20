@@ -1,4 +1,4 @@
-# vue-testing
+# Vue testing
 
 ## Project setup
 ```
@@ -18,6 +18,11 @@ yarn build
 ### Lints and fixes files
 ```
 yarn lint
+```
+
+### Testing
+```
+yarn test
 ```
 
 ### Customize configuration
