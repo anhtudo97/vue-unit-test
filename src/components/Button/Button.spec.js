@@ -1,23 +1,32 @@
-import { render, screen, fireEvent } from '@testing-library/vue'
+import {render, fireEvent} from '@testing-library/vue'
 import Button from './Button.vue'
+import '@testing-library/jest-dom'
 
-test('increments value on click', async () => {
-    // The `render` method renders the component into the document.
-    // It also binds to `screen` all the available queries to interact with
-    // the component.
-    render(Button)
+test('renders button with text', () => {
+  const text = "Click me; I'm sick"
 
-    // queryByText returns the first matching node for the provided text
-    // or returns null.
-    expect(screen.queryByText('Times clicked: 0')).toBeTruthy()
+  // Set the prop value by using the second argument of `render()`.
+  const {getByRole} = render(Button, {
+    props: {text},
+  })
 
-    // getByText returns the first matching node for the provided text
-    // or throws an error.
-    const button = screen.getByText('increment')
+  // Get the only element with a 'button' role.
+  const button = getByRole('button')
 
-    // Click a couple of times.
-    await fireEvent.click(button)
-    await fireEvent.click(button)
+  expect(button).toHaveTextContent(text)
+})
 
-    expect(screen.queryByText('Times clicked: 2')).toBeTruthy()
+test('emits click event when button is clicked', async () => {
+  const text = 'Click me'
+
+  const {getByRole, emitted} = render(Button, {
+    props: {text},
+  })
+
+  // Send a click event.
+  await fireEvent.click(getByRole('button'))
+
+  // Expect that the event emitted a "click" event. We should test for emitted
+  // events has they are part of the public API of the component.
+  expect(emitted()).toHaveProperty('click')
 })

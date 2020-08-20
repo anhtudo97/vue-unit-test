@@ -1,20 +1,20 @@
 <template>
-  <div>
-    <p>Times clicked: {{ count }}</p>
-    <button @click="increment">increment</button>
-  </div>
+  <button @click="handleClick">{{ text }}</button>
 </template>
 
 <script>
-  export default {
-    name: 'Button',
-    data: () => ({
-      count: 0,
-    }),
-    methods: {
-      increment() {
-        this.count++
-      },
+export default {
+  props: {
+    text: {
+      type: String,
+      default: "Button Text",
     },
-  }
+  },
+  methods: {
+    handleClick(e) {
+      console.log(e);
+      this.$emit("click");
+    },
+  },
+};
 </script>
