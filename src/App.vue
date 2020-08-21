@@ -1,19 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Button :text="ahihi"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <Button :text="text" />
+    <Vuex />
   </div>
 </template>
 
 <script>
-import Button from './components/Button/Button.vue'
+import Button from "./components/Button/Button.vue";
+import Vuex from "./components/Vuex/Vuex.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      text: "hihi",
+    };
+  },
   components: {
-    Button
-  }
-}
+    Button,
+    Vuex,
+  },
+};
 </script>
 
 <style>

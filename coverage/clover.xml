@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1597973597842" clover="3.2.0">
-  <project timestamp="1597973597842" name="All files">
-    <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="5" coveredelements="5" complexity="0" loc="3" ncloc="3" packages="2" files="2" classes="2"/>
-    <package name="Button">
+<coverage generated="1597981596815" clover="3.2.0">
+  <project timestamp="1597981596815" name="All files">
+    <metrics statements="11" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="6" elements="18" coveredelements="16" complexity="0" loc="11" ncloc="11" packages="4" files="4" classes="4"/>
+    <package name="components.Button">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Button.vue" path="/Users/zhaoyang/Documents/Project/Vue/vue-testing/src/components/Button/Button.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -10,10 +10,30 @@
         <line num="16" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="Select">
+    <package name="components.Select">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Select.vue" path="/Users/zhaoyang/Documents/Project/Vue/vue-testing/src/components/Select/Select.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Vuex">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Vuex.vue" path="/Users/zhaoyang/Documents/Project/Vue/vue-testing/src/components/Vuex/Vuex.vue">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="store">
+      <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+      <file name="index.js" path="/Users/zhaoyang/Documents/Project/Vue/vue-testing/src/store/index.js">
+        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
       </file>
     </package>
