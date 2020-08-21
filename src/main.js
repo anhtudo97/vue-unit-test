@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Vuex from 'vuex'
+import { store } from './store'
 
 Vue.use(Vuex)
-import { store } from './store'
+const storage = new Vuex.Store(store)
 
 Vue.config.productionTip = false
 
-const storage = new Vuex.Store(store)
 
 new Vue({
   store: storage,
